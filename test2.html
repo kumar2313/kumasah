@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Banner {
+            background-color: black;
+            color:aliceblue;
+            width: 100%;
+            height: 50px;
+        }
+        table,th,td{
+            border: 2px black dotted;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: black;
+            color: aliceblue;
+        }
+        .mainm {
+            background-color:beige;
+            width: 100%;
+            height: 200px;
+            overflow-y: scroll;
+        }
+
+        #search {
+            /* color: red; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Banner">
+        <center>
+            <H1>University Data</H1>
+        </center>
+    </div>
+    <br>
+    <label >Search : </label>
+    <input type="text" placeholder="Search University" id="search">
+    <input type="text" placeholder="Search Country" id="search1">
+    <button type="button" onclick="retrieveData()">Click Me!</button>
+    <br>
+    <div class="mainm">
+
+        <p id="deepak"></p>
+    </div>
+    <script src="test.js"></script>
+</body>
+
+</html>
