@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calc{
+            width:200px;
+            height:200px;
+            background-color: blue;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        #fname{
+            width:195px; 
+        }
+        .btnd{
+            float: left;
+        }
+        .btn{
+            background-color: cyan;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+        }
+        #fname{
+            background-color:yellow;
+            color:blue;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="fname" name="fname">
+    
+
+    <div class="calc">
+       <div class="btnd"><button class="btn" type="button" id="1" onclick="insertval('1')">1</button></div>
+       <div class="btnd"><button class="btn" type="button" id="2" onclick="insertval('2')">2</button></div>
+       <div class="btnd"><button class="btn" type="button" id="3" onclick="insertval('3')">3</button></div>
+       <div class="btnd"><button class="btn" type="button" id="pl" onclick="plus()">+</button></div>
+       <div class="btnd"><button class="btn" type="button" id="4" onclick="insertval('4')">4</button></div>
+       <div class="btnd"><button class="btn" type="button" id="5" onclick="insertval('5')">5</button></div>
+       <div class="btnd"><button class="btn" type="button" id="6" onclick="insertval('6')">6</button></div>
+       <div class="btnd"><button class="btn" type="button" id="mi" onclick="minu()">-</button></div>
+       <div class="btnd"><button class="btn" type="button" id="7" onclick="insertval('7')">7</button></div>
+       <div class="btnd"><button class="btn" type="button" id="8" onclick="insertval('8')">8</button></div>
+       <div class="btnd"><button class="btn" type="button" id="9" onclick="insertval('9')">9</button></div>
+       <div class="btnd"><button class="btn" type="button" id="di" onclick="divv()">/</button></div>
+       <div class="btnd"><button class="btn" type="button" id="0" onclick="insertval('0')">0</button></div>
+       <div class="btnd"><button class="btn" type="button" id="cl" onclick="clearme()">C</button></div>
+       <div class="btnd"><button class="btn" type="button" id="eqq" onclick="eqto()">=</button></div>
+       <div class="btnd"><button class="btn" type="button" id="mu" onclick="mulp()">*</button></div>
+    </div>
+
+
+    <script>
+        let txtname=document.getElementById("fname");
+        let firstval=0;
+        let secondval=0;
+        let operat="";
+        function insertval(val){
+            txtname.value=txtname.value+val
+        }
+        function clearme(){
+            // alert("clicked")
+            txtname.value="";
+            firstval=0;
+            secondval=0;
+            operat="";
+        }
+        function plus(){
+            firstval=txtname.value;
+            operat="+";
+            txtname.value="";
+            // alert(firstval)
+        }
+        function minu(){
+            firstval=txtname.value;
+            operat="-";
+            txtname.value="";
+            // alert(firstval)
+        }
+        function divv(){
+            firstval=txtname.value;
+            operat="/";
+            txtname.value="";
+            // alert(firstval)
+        }
+        function mulp(){
+            firstval=txtname.value;
+            operat="*";
+            txtname.value="";
+            // alert(firstval)
+        }
+        function eqto(){
+            secondval=txtname.value;
+            txtname.value=eval(firstval+operat+secondval);
+            // alert(firstval)
+        }
+        // clearme()
+    </script>
+</body>
+</html>
+
