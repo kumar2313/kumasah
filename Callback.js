@@ -16,10 +16,10 @@ function loadsrc(src,callback){
 
 function hellowworld(err,src){
     console.log("Source: "+src);
-    console.log("Error: "+err);
+    console.log(err);
 }
 
-loadsrc("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",hellowworld);
+loadsrc("https://cdn.jsdelivrr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",hellowworld);
 
 
 //javascript -> runtime load

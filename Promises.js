@@ -20,6 +20,21 @@ mypromise.then(
     function (error) {
         console.log(error)
     }
-)
+).finally(() => {
+    console.log("1st finally")
+  })
+
+mypromise
+  .then(value => {
+    console.log(value)
+  })
+  .catch(error => {
+   console.log(error)
+  })
+  .finally(() => {
+    console.log("finally")
+  })
+
+
 
 console.log(mypromise)
